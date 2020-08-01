@@ -27,12 +27,54 @@ $t: transparent;
 
 body {
   margin: 0;
-  background: linear-gradient( lighten( $n, 25 ), $od );
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+}
+
+.container {
+  margin: 0;
+  @include w-h( 100%, 100% );
+  // background-image: url("../resources/coder-cat.jpg");
+  background-size: 1400px;
+  border: 1px dotted blueviolet;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  position: relative;
+
+  @media only screen and (orientation: landscape) {
+    display: flex;
+  }
+}
+
+.s1,
+.s2 {
+  border: 10px solid $b;
+  @include w-h( 100%, 50% );
+
+  @media only screen and (orientation: landscape) {
+    @include w-h( 50%, 100% );
+  }
+}
+
+.s1 {
+  border-bottom: 5px solid $b;
+
+  @media only screen and (orientation: landscape) {
+    border-bottom: 10px solid $b;
+    border-right: 5px solid $b;
+  }
+}
+
+.s2 {
+  border-top: 5px solid $b;
+
+  @media only screen and (orientation: landscape) {
+    border-top: 10px solid $b;
+    border-left: 5px solid $b;
+  }
 }
 
 // .mountains {
