@@ -29,7 +29,6 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../resources/coder-cat.jpg");
   background-size: 1400px;
   background-repeat: no-repeat;
   background-position: 50% 100%;
@@ -116,8 +115,8 @@ p.desc {
           box-shadow: 0.5vmin 0 0 0 #000, -0.5vmin 0 0 0 #000, 0 -0.5vmin 0 0 #000;
   top: 13%;
   left: 32%;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(52%, transparent), color-stop(52.5%, #eaeaea)), radial-gradient(1.1% 2% at 29% 53%, #eaeaea 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 29% 52%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1.1% 2% at 70% 53%, #eaeaea 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 70% 52%, #000 1.7vmin, transparent 1.8vmin), #eaeaea;
-  background: linear-gradient(transparent 52%, #eaeaea 52.5%), radial-gradient(1.1% 2% at 29% 53%, #eaeaea 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 29% 52%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1.1% 2% at 70% 53%, #eaeaea 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 70% 52%, #000 1.7vmin, transparent 1.8vmin), #eaeaea;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(52%, transparent), color-stop(52.5%, #eaeaea)), radial-gradient(1.1% 2% at 27% 53%, #eaeaea 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 27% 52%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1.1% 2% at 70% 53%, #eaeaea 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 70% 52%, #000 1.7vmin, transparent 1.8vmin), #eaeaea;
+  background: linear-gradient(transparent 52%, #eaeaea 52.5%), radial-gradient(1.1% 2% at 27% 53%, #eaeaea 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 27% 52%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1.1% 2% at 70% 53%, #eaeaea 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 70% 52%, #000 1.7vmin, transparent 1.8vmin), #eaeaea;
 }
 
 .b1__cat--head-snout,
@@ -128,7 +127,7 @@ p.desc {
   border-radius: 50%;
   background-color: #fff;
   top: 56%;
-  left: 24%;
+  left: 23%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #eaeaea), color-stop(30.5%, transparent)), radial-gradient(1% 1.6% at 35.5% 28%, #eaeaea 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 36% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.6% at 60.5% 28%, #eaeaea 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 60% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.6% at 48.5% 46%, #000 2.5vmin, transparent 2.6vmin);
   background: linear-gradient(#eaeaea 30%, transparent 30.5%), radial-gradient(1% 1.6% at 35.5% 28%, #eaeaea 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 36% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.6% at 60.5% 28%, #eaeaea 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 60% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.6% at 48.5% 46%, #000 2.5vmin, transparent 2.6vmin);
 }
@@ -162,7 +161,7 @@ p.desc {
 .b1__cat--ear-l,
 .b2__cat--ear-l {
   top: 15%;
-  left: 31%;
+  left: 32%;
   -webkit-transform: rotate(85deg) skewX(-30deg);
           transform: rotate(85deg) skewX(-30deg);
 }
@@ -170,7 +169,7 @@ p.desc {
 .b1__cat--ear-r,
 .b2__cat--ear-r {
   top: 15%;
-  left: 60%;
+  left: 60.5%;
   -webkit-transform: rotate(155deg) skewX(-30deg);
           transform: rotate(155deg) skewX(-30deg);
 }
@@ -180,22 +179,70 @@ p.desc {
   width: 38vmin;
   height: 18vmin;
   background-color: #eaeaea;
-  border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
+  border-radius: 60% 60% 0% 0% / 100% 100% 0% 0;
   position: absolute;
   top: 42%;
   left: 26%;
 }
 
-.b1__cat--table,
-.b2__cat--table {
+.b1__table,
+.b2__table {
   width: 100vmin;
   height: 0.5vmin;
   background-color: #000;
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate3d(-50%, 12vmin, 0);
-          transform: translate3d(-50%, 12vmin, 0);
+  -webkit-transform: translate3d(-50%, 25vmin, 0);
+          transform: translate3d(-50%, 25vmin, 0);
+}
+
+.b1__computer,
+.b2__computer {
+  width: 41vmin;
+  height: 30vmin;
+  position: absolute;
+  top: 59%;
+  left: 6%;
+}
+
+.b1__computer::before, .b1__computer::after,
+.b2__computer::before,
+.b2__computer::after {
+  border: 0.5vmin solid #000;
+}
+
+.b1__computer::before,
+.b2__computer::before {
+  content: '';
+  width: 25vmin;
+  height: 12vmin;
+  display: block;
+  position: absolute;
+  -webkit-box-shadow: 0.2vmin 0.2vmin 0 0 #000, 0.4vmin 0.4vmin 0 0 #000, 0.6vmin 0.6vmin 0 0 #000, 0.8vmin 0.8vmin 0 0 #000, 1vmin 1vmin 0 0 #000;
+          box-shadow: 0.2vmin 0.2vmin 0 0 #000, 0.4vmin 0.4vmin 0 0 #000, 0.6vmin 0.6vmin 0 0 #000, 0.8vmin 0.8vmin 0 0 #000, 1vmin 1vmin 0 0 #000;
+  top: 61%;
+  left: 36%;
+  border-radius: 5%;
+  background-color: #fff;
+  -webkit-transform: rotate(15deg) skewX(-35deg);
+          transform: rotate(15deg) skewX(-35deg);
+}
+
+.b1__computer::after,
+.b2__computer::after {
+  content: '';
+  width: 34vmin;
+  height: 24vmin;
+  display: block;
+  position: absolute;
+  border-right: 1vmin solid #000;
+  -webkit-transform: skewY(15deg);
+          transform: skewY(15deg);
+  top: 17%;
+  left: 0.5%;
+  border-radius: 5%;
+  background-color: #fff;
 }
 
 .b1 {
@@ -214,7 +261,6 @@ p.desc {
   height: 26vmin;
   position: absolute;
   background-color: #eaeaea;
-  border-radius: 50% 50% 0% 0% / 20% 20% 0% 0;
   -webkit-box-shadow: 0.5vmin 0 0 0 #000, -0.5vmin 0 0 0 #000;
           box-shadow: 0.5vmin 0 0 0 #000, -0.5vmin 0 0 0 #000;
   top: 17%;

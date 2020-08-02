@@ -44,7 +44,7 @@ body {
 .wrapper {
   margin: 0;
   @include w-h( 100%, 100% );
-  background-image: url("../resources/coder-cat.jpg");
+  // background-image: url("../resources/coder-cat.jpg");
   background-size: 1400px;
   background-repeat: no-repeat;
   background-position: 50% 100%;
@@ -110,17 +110,16 @@ p {
       @include w-h( 30vmin, 23vmin );
       border-radius: 88% 88% 60% 60% / 100% 100% 65% 65%;
       position: absolute;
-      // overflow: hidden;
       box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b, 0 -0.5vmin 0 0 $b;
       // background-color: $w;
       @include t-l( 13%, 32% );
       background:
         // eyes
         linear-gradient( $t 52%, $g1 52.5% ),
-        radial-gradient( 1.1% 2% at 29% 53%, $g1 1.3vmin, $t 1.4vmin ),    radial-gradient( 1% 2% at 29% 52%, $b 1.7vmin, $t 1.8vmin ),
+        radial-gradient( 1.1% 2% at 27% 53%, $g1 1.3vmin, $t 1.4vmin ),    radial-gradient( 1% 2% at 27% 52%, $b 1.7vmin, $t 1.8vmin ),
         radial-gradient( 1.1% 2% at 70% 53%, $g1 1.3vmin, $t 1.4vmin ),    radial-gradient( 1% 2% at 70% 52%, $b 1.7vmin, $t 1.8vmin ),
         $g1
-        ;
+      ;
 
       &-snout {
         @include w-h( 17vmin, 10vmin );
@@ -128,7 +127,7 @@ p {
         border-radius: 50%;
         background-color: $w;
         // border: 1px solid green;
-        @include t-l( 56%, 24% );
+        @include t-l( 56%, 23% );
         background:
           // mouth
           linear-gradient( $g1 30%, $t 30.5% ),
@@ -159,12 +158,12 @@ p {
     }
 
     &--ear-l {
-      @include t-l( 15%, 31% );
+      @include t-l( 15%, 32% );
       transform: rotate( 85deg ) skewX( -30deg );
     }
 
     &--ear-r {
-      @include t-l( 15%, 60% );
+      @include t-l( 15%, 60.5% );
       transform: rotate( 155deg ) skewX( -30deg );
     }
 
@@ -172,17 +171,54 @@ p {
       @include w-h( 38vmin, 18vmin );
       // box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b;
       background-color: $g1;
-      border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
+      border-radius: 60% 60% 0% 0% / 100% 100% 0% 0;
       position: absolute;
       @include t-l( 42%, 26% );
     }
+  }
 
-    &--table {
-      @include w-h( 100vmin, 0.5vmin );
-      background-color: $b;
-      position: absolute;
-      @include t-l( 50%, 50% );
-      transform: translate3d( -50%, 12vmin, 0 );
+  &__table {
+    @include w-h( 100vmin, 0.5vmin );
+    background-color: $b;
+    position: absolute;
+    @include t-l( 50%, 50% );
+    transform: translate3d( -50%, 25vmin, 0 );
+  }
+
+  &__computer {
+    @include w-h( 41vmin, 30vmin );
+    // border: 1px solid blue;
+    position: absolute;
+    @include t-l( 59%, 6% );
+
+    &::before,
+    &::after {
+      border: 0.5vmin solid $b;
+    }
+
+    // keyboard
+    &::before {
+      @include pseduo-div( 25vmin, 12vmin );
+      box-shadow:
+        0.2vmin 0.2vmin 0 0 $b,
+        0.4vmin 0.4vmin 0 0 $b,
+        0.6vmin 0.6vmin 0 0 $b,
+        0.8vmin 0.8vmin 0 0 $b,
+        1vmin 1vmin 0 0 $b;
+      @include t-l( 61%, 36% );
+      border-radius: 5%;
+      background-color: $w;
+      transform: rotate( 15deg ) skewX( -35deg );
+    }
+
+    // top
+    &::after {
+      @include pseduo-div( 34vmin, 24vmin );
+      border-right: 1vmin solid $b;
+      transform: skewY( 15deg );
+      @include t-l( 17%, 0.5% );
+      border-radius: 5%;
+      background-color: $w;
     }
   }
 }
@@ -200,11 +236,10 @@ p {
       @include w-h( 10vmin, 26vmin );
       position: absolute;
       background-color: $g1;
-      border-radius: 50% 50% 0% 0% / 20% 20% 0% 0;
       box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b;
       @include t-l( 17%, 18% );
       transform: rotate( -32deg );
-      // background: 
+      // background:
     }
   }
 }
@@ -217,290 +252,3 @@ p {
     border-left: 5px solid $b;
   }
 }
-
-// .mountains {
-//   &--1,
-//   &--2 {
-//     width: 100vw;
-//     height: 100vh;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//   }
-
-//   &--1 {
-//     clip-path: polygon(0 35%, 7% 28%, 12% 38%, 20% 30%, 26% 34%, 37% 12%, 47% 28%, 55% 34%, 62% 20%, 70% 26%, 76% 17%, 85% 33%, 88% 29%, 94% 39%, 100% 34%, 100% 100%, 0 100%);
-//     background:
-//     linear-gradient( $n 50%, darken( $n, 20 ));
-//   }
-
-//   &--2 {
-//     clip-path: polygon(0 55%, 8% 60%, 18% 74%, 25% 69%, 31% 70%, 38% 74%, 58% 75.5%, 67% 73%, 72% 68%, 86% 68%, 93% 64%, 96% 54%, 100% 48%, 100% 100%, 0 100%);
-//     background:
-//     linear-gradient( $n 40%, darken( $n, 20% ));
-//   }
-// }
-
-// .aang {
-//   @include w-h( 50vmin, 90vmin );
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   position: relative;
-// }
-
-// .sign {
-//   @include w-h( 54%, 22% );
-//   position: absolute;
-//   top: -2.5%;
-//   transform: rotate( -2.5deg );
-//   background: linear-gradient( 165deg, darken( $wh, 15 ) 65%, darken( $wh, 5 ) 66% );
-
-//   svg {
-//     @include w-h( 90%, 90% );
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate3d( -50%, -50%, 0 );
-//   }
-// }
-
-// .head {
-//   @include w-h( 21.5%, 15.5% );
-//   border-radius: 50% / 40% 40% 60% 60%;
-//   position: absolute;
-//   top: 27%;
-//   left: 38.8%;
-//   overflow: hidden;
-//   background: $sl;
-
-//   // eyes
-//   &::before,
-//   &::after {
-//     @include pseduo-div( 29%, 11%, null );
-//     border-radius: 0 0 20vmin 20vmin;
-//     top: 58%;
-//     background-color: $wh;
-//     box-shadow: 0 0 1vmin 0 $wh, 0 0 2vmin 0 $bu, 0 0 2.2vmin 0 $bu, 0 0 3vmin 0 $bu;
-//     z-index: 10;
-//   }
-
-//   &::before {
-//     left: 13%;
-//     transform: rotate( 25deg );
-//   }
-
-//   &::after {
-//     left: 60%;
-//     transform: rotate( -25deg );
-//   }
-
-//   // arrow
-//   &__arrow {
-//     &--top {
-//       @include w-h( 25%, 37% );
-//       background-color: $wh;
-//       position: absolute;
-//       top: 0;
-//       left: 37.5%;
-//       border-radius: 25% 25% 5% 5%;
-//       box-shadow: 0 0 0.5vmin 0 $wh, 0 0 2vmin 0 $bu, 0 0 4vmin 0 $bu;
-
-//       // line
-//       &::before {
-//         @include pseduo-div( 100%, 100%, null );
-//         top: 4%;
-//         left: 0;
-//         border-radius: 25% 25% 5% 5%;
-//         background-color: $wh;
-//         animation: glow 3s infinite ease-in-out;
-//       }
-
-//       // arrow
-//       &::after {
-//         @include pseduo-div( 0, 0, null );
-//         top: -18%;
-//         left: 28%;
-//         border-bottom: 4.5vmin solid $wh;
-//         border-left: 4.5vmin solid $t;
-//         border-top: 4.5vmin solid $t;
-//         transform: rotate( 45deg );
-//       }
-//     }
-
-//     &--triangle {
-//       top: -2%;
-//       left: 44%;
-//       position: relative;
-
-//       &::before,
-//       &::after {
-//         @include pseduo-div( 0, 0, null );
-//         top: -2.2vmin;
-//         left: 0;
-//         filter: blur( 0.5vmin );
-//         transform: rotate( 45deg );
-//         border-left: 5.5vmin solid $t;
-//         border-top: 5.5vmin solid $t;
-//         animation: glow 3s infinite ease-in-out;
-//       }
-
-//       &::before {
-//         border-bottom: 5.5vmin solid $bu;
-//       }
-
-//       &::after {
-//         border-bottom: 5.5vmin solid $wh;
-//       }
-//     }
-//   }
-
-//   // shadow
-//   &__shadow {
-//     @include w-h( 94%, 78% );
-//     border-radius: 50% / 40% 40% 60% 60%;
-//     background-color: $sd;
-//     position: absolute;
-//     bottom: 2%;
-//     left: 3.2%;
-//     animation: glow 3s infinite ease-in-out;
-//   }
-// }
-
-// .ear {
-//   &__l,
-//   &__r,
-//   &__l::before,
-//   &__r::before {
-//     border-radius: 50% / 60% 60% 40% 40%;
-//   }
-
-//   &__l,
-//   &__r {
-//     @include w-h( 4.7%, 4.2% );
-//     background-color: $sl;
-//     position: absolute;
-//     top: 33%;
-
-//     &::before {
-//       @include pseduo-div( 85%, 85%, $sd );
-//       left: 0;
-//     }
-//   }
-
-//   &__l {
-//     left: 35.5%;
-//     transform: rotate( -195deg );
-
-//     &::before {
-//       left: 12%;
-//       background:
-//         radial-gradient( 4% 4% at 20% 40%, $sl 0.3vmin, $t 0.4vmin ),
-//         $sd;
-//     }
-//   }
-
-//   &__r {
-//     left: 59%;
-//     transform: rotate( 195deg );
-
-//     &::before {
-//       background:
-//         radial-gradient( 4% 4% at 92% 38%, $sl 0.3vmin, $t 0.4vmin ),
-//         $sd;
-//     }
-//   }
-// }
-
-// .neck {
-//   @include w-h( 21%, 7.5% );
-//   background: linear-gradient( 180deg, $yd 25%, $od);
-//   position: absolute;
-//   border-radius: 22% 22% 0 0;
-//   top: 39.5%;
-//   left: 39.2%;
-
-//   // neck
-//   &::before {
-//     @include pseduo-div( 50%, 60%, $sd );
-//     top: 24%;
-//     left: 24%;
-//   }
-// }
-
-// .collar {
-//   &__r,
-//   &__l {
-//     @include w-h( 7.2%, 6% );
-//     position: absolute;
-//     top: 40.2%;
-
-//     &::after {
-//       @include pseduo-div( 45%, 53%, null );
-//       top: 35%;
-//     }
-//   }
-
-//   &__l {
-//     background: linear-gradient( 26deg, $od 28%, $ym calc( 28% + 1px ), $ym 68%, $yl 70%, $t calc( 70% + 1px ));
-//     left: 39.3%;
-//     border-radius: 0 0 0 100% / 0 0 0 60%;
-
-//     &::after {
-//       left: 100%;
-//       background: linear-gradient( 60deg, $ym 48%, $t 49% );
-//     }
-
-//     // center bottom curve
-//     &::before {
-//       @include pseduo-div( 100%, 14%, null );
-//       top: 84%;
-//       left: 94%;
-//       background: linear-gradient( $t 20%, $ym 20% );
-//       border-radius: 50%;
-//     }
-//   }
-
-//   &__r {
-//     background: linear-gradient( -26deg, $od 28%, $ym calc( 28% + 1px ), $ym 68%, $yl 70%, $t calc( 70% + 1px ));
-//     left: 52.8%;
-//     border-radius: 0 0 100% 0 / 0 0 60% 0;
-
-//     &::after {
-//       left: -45%;
-//       background: linear-gradient( -58deg, $ym 50%, $t 51% );
-//     }
-//   }
-// }
-
-// .cloak {
-//   @include w-h( 58%, 35% );
-//   border-radius: 50% / 40% 40% 60% 60%;
-//   position: absolute;
-//   top: 29.5%;
-//   overflow: hidden;
-
-//   &::before,
-//   &::after {
-//     @include pseduo-div( 70%, 80%, null );
-//     top: 17%;
-//   }
-
-//   &::before {
-//     left: -41%;
-//     background:
-//       linear-gradient( -5deg, $t 96%, $ol 96.5% ),
-//       radial-gradient( 2% 4% at 77% 6%, $od 4.6vmin, $t 4.7vmin ),
-//       linear-gradient( 90deg, $od 80%, $t 80.5% );
-//     transform: rotate( 50deg );
-//   }
-
-//   &::after {
-//     left: 69%;
-//     background:
-//       linear-gradient( 5deg, $t 96%, $ol 96.5% ),
-//       radial-gradient( 2% 4% at 24% 8%, $od 4.6vmin, $t 4.7vmin ),
-//       linear-gradient( -90deg, $od 80%, $t 80.5% );
-//     transform: rotate( -50deg );
-//   }
-// }
