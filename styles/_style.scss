@@ -78,7 +78,7 @@ p {
     font-size: 20px;
 
     @media only screen and (orientation: landscape) {
-      font-size: 30px;
+      font-size: 27px;
     }
   }
 }
@@ -231,7 +231,7 @@ p {
     &--table {
       @include w-h( 200%, 50vmin );
       @include t-l( 50%, 50% );
-      background: linear-gradient( $w 30%, $g3 );
+      background: linear-gradient( $w 20%, $g3 );
       border-top: 2px solid $b;
       position: absolute;
       transform: translate3d( -50%, 10vmin, 0 );
@@ -416,16 +416,16 @@ p {
       @include t-l( 42%, 64% );
       transform: rotate( -25deg );
       border-radius: 100% 100% 0% 0% / 100% 50% 0% 100%;
-      border: 3px solid $b;
+      border: 0.5vmin solid $b;
       background-color: $g1;
 
       &::after {
         @include pseduo-div( 100%, 45% );
-        @include t-l( -7%, -23% );
+        @include t-l( -6.6%, -23% );
         border-radius: 30% 100% 100% 40% / 100% 100% 100% 90%;
-        transform: rotate( 30deg );
+        transform: rotate( 29.6deg );
         background:
-          linear-gradient( $b 5%, $g1 6%, $g1 95%, $b 96% );
+          linear-gradient( $b 5%, $g1 6%, $g1 94%, $b 95% );
       }
 
       &::before {

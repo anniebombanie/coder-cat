@@ -67,7 +67,7 @@ p.desc {
 
 @media only screen and (orientation: landscape) {
   p.desc {
-    font-size: 30px;
+    font-size: 27px;
   }
 }
 
@@ -272,8 +272,8 @@ p.desc {
   height: 50vmin;
   top: 50%;
   left: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #fff), to(#7e7e7e));
-  background: linear-gradient(#fff 30%, #7e7e7e);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #fff), to(#7e7e7e));
+  background: linear-gradient(#fff 20%, #7e7e7e);
   border-top: 2px solid #000;
   position: absolute;
   -webkit-transform: translate3d(-50%, 10vmin, 0);
@@ -469,7 +469,7 @@ p.desc {
   -webkit-transform: rotate(-25deg);
           transform: rotate(-25deg);
   border-radius: 100% 100% 0% 0% / 100% 50% 0% 100%;
-  border: 3px solid #000;
+  border: 0.5vmin solid #000;
   background-color: #d3d3d3;
 }
 
@@ -479,13 +479,13 @@ p.desc {
   height: 45%;
   display: block;
   position: absolute;
-  top: -7%;
+  top: -6.6%;
   left: -23%;
   border-radius: 30% 100% 100% 40% / 100% 100% 100% 90%;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #000), color-stop(6%, #d3d3d3), color-stop(95%, #d3d3d3), color-stop(96%, #000));
-  background: linear-gradient(#000 5%, #d3d3d3 6%, #d3d3d3 95%, #000 96%);
+  -webkit-transform: rotate(29.6deg);
+          transform: rotate(29.6deg);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #000), color-stop(6%, #d3d3d3), color-stop(94%, #d3d3d3), color-stop(95%, #000));
+  background: linear-gradient(#000 5%, #d3d3d3 6%, #d3d3d3 94%, #000 95%);
 }
 
 .b2__cat--arm-r::before {
