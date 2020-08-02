@@ -11,6 +11,7 @@ html {
 /* --- Colours --- */
 $w: #fff;
 $b: #000;
+$g1: #eaeaea;
 $t: transparent;
 
 @mixin pseduo-div( $w, $h ) {
@@ -106,35 +107,74 @@ p {
     transform: translate3d( -50%, -30%, 0 );
 
     &--head {
-      @include w-h( 32vmin, 26vmin );
-      border-radius: 50%;
+      @include w-h( 30vmin, 23vmin );
+      border-radius: 88% 88% 60% 60% / 100% 100% 65% 65%;
       position: absolute;
-      overflow: hidden;
+      // overflow: hidden;
       box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b, 0 -0.5vmin 0 0 $b;
       // background-color: $w;
-      @include t-l( 13%, 31% );
+      @include t-l( 13%, 32% );
       background:
-        linear-gradient( $t 48%, $w 48.5%, $w 58%, $t 58.5% ),
         // eyes
-        radial-gradient( 0.9% 2% at 29% 48%, $w 1.3vmin, $t 1.4vmin ),    radial-gradient( 1% 2% at 29% 47%, $b 1.7vmin, $t 1.8vmin ),
-        radial-gradient( 0.9% 2% at 70% 48%, $w 1.3vmin, $t 1.4vmin ),    radial-gradient( 1% 2% at 70% 47%, $b 1.7vmin, $t 1.8vmin ),
-        // nose
-        radial-gradient( 1% 1.5% at 50% 58%, $b 1.5vmin, $t 1.6vmin ),
-        // mouth
-        // linear-gradient( $w 65%, $t 65.5% ),
-        radial-gradient( 1% 1.2% at 40.5% 64%, $w 2.6vmin, $t 2.7vmin ),
-        radial-gradient( 1% 1.2% at 41% 64%, $b 3vmin, $t 3.1vmin ),
-        radial-gradient( 1% 1.2% at 60% 64%, $w 2.6vmin, $t 2.7vmin ),
-        radial-gradient( 1% 1.2% at 59.5% 64%, $b 3vmin, $t 3.1vmin )
+        linear-gradient( $t 52%, $g1 52.5% ),
+        radial-gradient( 1.1% 2% at 29% 53%, $g1 1.3vmin, $t 1.4vmin ),    radial-gradient( 1% 2% at 29% 52%, $b 1.7vmin, $t 1.8vmin ),
+        radial-gradient( 1.1% 2% at 70% 53%, $g1 1.3vmin, $t 1.4vmin ),    radial-gradient( 1% 2% at 70% 52%, $b 1.7vmin, $t 1.8vmin ),
+        $g1
         ;
+
+      &-snout {
+        @include w-h( 17vmin, 10vmin );
+        position: absolute;
+        border-radius: 50%;
+        background-color: $w;
+        // border: 1px solid green;
+        @include t-l( 56%, 24% );
+        background:
+          // mouth
+          linear-gradient( $g1 30%, $t 30.5% ),
+          radial-gradient( 1% 1.6% at 35.5% 28%, $g1 1.8vmin, $t 1.9vmin ),
+          radial-gradient( 1% 1.6% at 36% 28%, $b 2.2vmin, $t 2.3vmin ),
+          radial-gradient( 1% 1.6% at 60.5% 28%, $g1 1.8vmin, $t 1.9vmin ),
+          radial-gradient( 1% 1.6% at 60% 28%, $b 2.2vmin, $t 2.3vmin ),
+          radial-gradient( 1% 1.6% at 48.5% 46%, $b 2.5vmin, $t 2.6vmin ),
+          ;
+        // nose
+        &:after {
+          @include pseduo-div( 3.5vmin, 2.2vmin );
+          border-radius: 45% 45% 70% 70% / 40% 40% 100% 100%;
+          background-color: $b;
+          @include t-l( 10%, 38% );
+        }
+      }
+    }
+
+    &--ear-l,
+    &--ear-r {
+      @include w-h( 11vmin, 11vmin );
+      position: absolute;
+      background-color: $g1;
+      border-radius: 20%;
+      border: 0.5vmin solid $b;
+      clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+    }
+
+    &--ear-l {
+      @include t-l( 15%, 31% );
+      transform: rotate( 85deg ) skewX( -30deg );
+    }
+
+    &--ear-r {
+      @include t-l( 15%, 60% );
+      transform: rotate( 155deg ) skewX( -30deg );
     }
 
     &--body {
-      @include w-h( 40vmin, 20vmin );
-      border: 3px solid $b;
+      @include w-h( 38vmin, 18vmin );
+      // box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b;
+      background-color: $g1;
       border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
       position: absolute;
-      @include t-l( 40%, 26% );
+      @include t-l( 42%, 26% );
     }
 
     &--table {
@@ -159,10 +199,12 @@ p {
     &--arm-l {
       @include w-h( 10vmin, 26vmin );
       position: absolute;
+      background-color: $g1;
       border-radius: 50% 50% 0% 0% / 20% 20% 0% 0;
       box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b;
       @include t-l( 17%, 18% );
       transform: rotate( -38deg );
+      // background: 
     }
   }
 }
