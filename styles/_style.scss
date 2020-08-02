@@ -11,6 +11,7 @@ html {
 /* --- Colours --- */
 $w: #fff;
 $b: #000;
+$g0: #e4e4e4;
 $g1: #d3d3d3;
 $g2: #a8a8a8;
 $g3: #7e7e7e;
@@ -46,11 +47,8 @@ body {
 .wrapper {
   margin: 0;
   @include w-h( 100%, 100% );
-  // background-image: url("../resources/coder-cat.jpg");
-  // background-size: 1400px;
-  // background-repeat: no-repeat;
-  // background-position: 50% 100%;
   position: relative;
+  background-color: $g0;
 
   @media only screen and (orientation: landscape) {
     display: flex;
@@ -231,7 +229,7 @@ p {
     &--table {
       @include w-h( 200%, 50vmin );
       @include t-l( 50%, 50% );
-      background: linear-gradient( $w 20%, $g3 );
+      background: linear-gradient( $w 20%, $g1 );
       border-top: 2px solid $b;
       position: absolute;
       transform: translate3d( -50%, 10vmin, 0 );
