@@ -69,7 +69,6 @@ p {
   font-style: italic;
   font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
-  display: inline-block;
 
   &.desc {
     display: block;
@@ -82,34 +81,42 @@ p {
 
 .bubble {
   line-height: 1.3;
-  font-size: 20px;
   padding: 2%;
+  transform: rotate( -10deg );
 
   p {
-    background-color: $w;
-
     text-shadow:
       -0.2vmin -0.2vmin 0 $w,
       -0.4vmin -0.4vmin 0 $w,
       -0.6vmin -0.6vmin 0 $w,
       -0.8vmin -0.8vmin 0 $w,
       -1vmin -1vmin 0 $w,
+      -1.2vmin -1.2vmin 0 $w,
+      -1.4vmin -1.4vmin 0 $w,
       0.2vmin 0.2vmin 0 $w,
       0.4vmin 0.4vmin 0 $w,
       0.6vmin 0.6vmin 0 $w,
       0.8vmin 0.8vmin 0 $w,
-      1vmin 1vmin 0 $w;
+      1vmin 1vmin 0 $w,
+      1.2vmin 1.2vmin 0 $w,
+      1.4vmin 1.4vmin 0 $w;
 
     &:first-child {
       font-style: italic;
+      font-size: 30px;
+
+      @media only screen and (orientation: landscape) {
+        font-size: 60px;
+      }
     }
 
     &:last-child {
+      font-size: 20px;
       text-transform: uppercase;
-    }
 
-    @media only screen and (orientation: landscape) {
-      font-size: 40px;
+      @media only screen and (orientation: landscape) {
+        font-size: 40px;
+      }
     }
   }
 }
@@ -129,14 +136,18 @@ p {
     position: absolute;
     @include w-h( 70vmin, 70vmin );
     @include t-l( 50%, 50% );
-    transform: translate3d( -50%, -30%, 0 );
+    transform: translate3d( -50%, -20%, 0 );
+
+    @media only screen and (orientation: landscape) {
+      transform: translate3d( -50%, -30%, 0 );
+    }
 
     &--head {
       @include w-h( 28vmin, 21vmin );
       border-radius: 88% 88% 60% 60% / 100% 100% 75% 75%;
       position: absolute;
       box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b, 0 -0.5vmin 0 0 $b;
-      @include t-l( 16.2%, 33% );
+      @include t-l( 17%, 33% );
       background:
         // eyes
         linear-gradient( $t 54%, $g1 54.5% ),
@@ -179,8 +190,12 @@ p {
       position: absolute;
       background-color: $g1;
       border-radius: 20%;
-      border: 0.5vmin solid $b;
+      border: 2px solid $b;
       clip-path: polygon( 0% 0%, 100% 100%, 0% 100% );
+
+      @media only screen and (orientation: landscape) {
+        border: 0.5vmin solid $b;
+      }
 
       &::before {
         @include pseduo-div( 70%, 70% );
@@ -192,8 +207,8 @@ p {
     }
 
     &--ear-l {
-      @include t-l( 15%, 32.5% );
-      transform: rotate( 115deg ) skewY( -30deg );
+      @include t-l( 16%, 32% );
+      transform: rotate( 114deg ) skewY( -30deg );
 
       &::before {
         @include t-l( 20%, 10.5% );
@@ -201,8 +216,8 @@ p {
     }
 
     &--ear-r {
-      @include t-l( 15.2%, 59.5% );
-      transform: rotate( 155deg ) skewX( -30deg );
+      @include t-l( 16.2%, 60% );
+      transform: rotate( 156deg ) skewX( -30deg );
 
       &::before {
         @include t-l( 20%, 15.5% );
@@ -217,7 +232,9 @@ p {
       position: absolute;
       // border: 1px solid green;
       @include t-l( 41.6%, 27.2% );
-      background: radial-gradient( 1% 2.2% at 50% 100%, $w 12vmin, $g1 12.1vmin );
+      background:
+        radial-gradient( 1% 2.2% at 50% 100%, $w 12vmin, $t 12.1vmin ),
+        linear-gradient( $t 10%, $g1 10% );
     }
 
     &--table {
@@ -289,7 +306,7 @@ p {
       position: relative;
       // border: 10px solid green;
       background-color: $w;
-      clip-path: polygon(10% 94%, 2% 84%, 16% 85%, 5% 66%, 20% 68%, 11% 31%, 30% 56%, 25% 19%, 40% 48%, 48% 12%, 55% 49%, 72% 23%, 70% 53%, 87% 32%, 79% 63%, 98% 57%, 86% 73%, 100% 80%, 85% 89%, 100% 100%, 0 100%);
+      clip-path: polygon(14% 93%, 2% 84%, 17% 81%, 5% 66%, 23% 70%, 5% 41%, 30% 57%, 22% 24%, 40% 51%, 48% 12%, 55% 51%, 75% 25%, 66% 57%, 90% 45%, 72% 68%, 99% 63%, 77% 80%, 100% 80%, 83% 92%, 100% 100%, 0 100%);
     }
 
     &--arm-l,
