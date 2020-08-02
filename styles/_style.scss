@@ -57,18 +57,19 @@ body {
   }
 
   // dots
-  // &::before {
-  //   @include pseduo-div( 100%, 100% );
-  //   background: radial-gradient( circle at center, $b 1px, $t 1% );
-  //   background-repeat: repeat;
-  //   background-size: 8px 8px;
-  // }
+  &::before {
+    @include pseduo-div( 100%, 100% );
+    background: radial-gradient( circle at center, $b 1px, $t 1% );
+    background-repeat: repeat;
+    background-size: 8px 8px;
+  }
 }
 
 p {
   font-style: italic;
   font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
+  display: inline-block;
 
   &.desc {
     display: block;
@@ -85,6 +86,20 @@ p {
   padding: 2%;
 
   p {
+    background-color: $w;
+
+    text-shadow:
+      -0.2vmin -0.2vmin 0 $w,
+      -0.4vmin -0.4vmin 0 $w,
+      -0.6vmin -0.6vmin 0 $w,
+      -0.8vmin -0.8vmin 0 $w,
+      -1vmin -1vmin 0 $w,
+      0.2vmin 0.2vmin 0 $w,
+      0.4vmin 0.4vmin 0 $w,
+      0.6vmin 0.6vmin 0 $w,
+      0.8vmin 0.8vmin 0 $w,
+      1vmin 1vmin 0 $w;
+
     &:first-child {
       font-style: italic;
     }
@@ -111,9 +126,8 @@ p {
   }
 
   &__cat {
-    @include w-h( 70vmin, 70vmin );
-    // border: 2px dashed green;
     position: absolute;
+    @include w-h( 70vmin, 70vmin );
     @include t-l( 50%, 50% );
     transform: translate3d( -50%, -30%, 0 );
 
@@ -167,16 +181,32 @@ p {
       border-radius: 20%;
       border: 0.5vmin solid $b;
       clip-path: polygon( 0% 0%, 100% 100%, 0% 100% );
+
+      &::before {
+        @include pseduo-div( 70%, 70% );
+        position: absolute;
+        background-color: $g2;
+        border-radius: 20%;
+        clip-path: polygon( 0% 0%, 100% 100%, 0% 100% );
+      }
     }
 
     &--ear-l {
       @include t-l( 15%, 32.5% );
       transform: rotate( 115deg ) skewY( -30deg );
+
+      &::before {
+        @include t-l( 20%, 10.5% );
+      }
     }
 
     &--ear-r {
-      @include t-l( 15%, 59.5% );
+      @include t-l( 15.2%, 59.5% );
       transform: rotate( 155deg ) skewX( -30deg );
+
+      &::before {
+        @include t-l( 20%, 15.5% );
+      }
     }
 
     &--body {
@@ -189,57 +219,62 @@ p {
       @include t-l( 41.6%, 27.2% );
       background: radial-gradient( 1% 2.2% at 50% 100%, $w 12vmin, $g1 12.1vmin );
     }
+
+    &--table {
+      @include w-h( 200%, 50vmin );
+      background-color: $w;
+      border-top: 2px solid $b;
+      position: absolute;
+      @include t-l( 50%, 50% );
+      transform: translate3d( -50%, 10vmin, 0 );
+    }
+
+    &--computer {
+      @include w-h( 41vmin, 30vmin );
+      // border: 1px solid blue;
+      position: absolute;
+      @include t-l( 40%, 6% );
+
+      &::before,
+      &::after {
+        border: 0.5vmin solid $b;
+      }
+
+      // keyboard
+      &::before {
+        @include pseduo-div( 25vmin, 13vmin );
+        box-shadow:
+          0.2vmin 0.2vmin 0 0 $b,
+          0.4vmin 0.4vmin 0 0 $b,
+          0.6vmin 0.6vmin 0 0 $b,
+          0.8vmin 0.8vmin 0 0 $b,
+          1vmin 1vmin 0 0 $b;
+        @include t-l( 58.6%, 36.8% );
+        border-radius: 8%;
+        background-color: $g3;
+        transform: rotate( 15deg ) skewX( -35deg );
+      }
+
+      // top
+      &::after {
+        @include pseduo-div( 34vmin, 24vmin );
+        border-right: 1vmin solid $b;
+        transform: skewY( 15deg );
+        @include t-l( 17%, 0.5% );
+        border-radius: 5%;
+        background-color: $g2;
+      }
+    }
   }
 
-  &__table {
-    @include w-h( 100vmin, 50vmin );
-    background-color: $w;
-    border-top: 2px solid $b;
-    position: absolute;
-    @include t-l( 50%, 50% );
-    transform: translate3d( -50%, 10vmin, 0 );
-  }
-
-  &__computer {
-    @include w-h( 41vmin, 30vmin );
-    // border: 1px solid blue;
-    position: absolute;
-    @include t-l( 40%, 6% );
-
-    &::before,
-    &::after {
-      border: 0.5vmin solid $b;
-    }
-
-    // keyboard
-    &::before {
-      @include pseduo-div( 25vmin, 13vmin );
-      box-shadow:
-        0.2vmin 0.2vmin 0 0 $b,
-        0.4vmin 0.4vmin 0 0 $b,
-        0.6vmin 0.6vmin 0 0 $b,
-        0.8vmin 0.8vmin 0 0 $b,
-        1vmin 1vmin 0 0 $b;
-      @include t-l( 58.6%, 36.8% );
-      border-radius: 8%;
-      background-color: $g3;
-      transform: rotate( 15deg ) skewX( -35deg );
-    }
-
-    // top
-    &::after {
-      @include pseduo-div( 34vmin, 24vmin );
-      border-right: 1vmin solid $b;
-      transform: skewY( 15deg );
-      @include t-l( 17%, 0.5% );
-      border-radius: 5%;
-      background-color: $g2;
-    }
+  &__txt {
+    z-index: 10;
+    position: relative;
   }
 }
 
 .b1 {
-  border-bottom: 5px solid $b;
+  border-bottom: 0;
 
   @media only screen and (orientation: landscape) {
     border-bottom: 10px solid $b;
@@ -247,6 +282,16 @@ p {
   }
 
   &__cat {
+    &--spark {
+      @include w-h( 150%, 100% );
+      @include t-l( 50%, 50% );
+      transform: translate3d( -50%, -85%, 0 );
+      position: relative;
+      // border: 10px solid green;
+      background-color: $w;
+      clip-path: polygon(10% 94%, 2% 84%, 16% 85%, 5% 66%, 20% 68%, 11% 31%, 30% 56%, 25% 19%, 40% 48%, 48% 12%, 55% 49%, 72% 23%, 70% 53%, 87% 32%, 79% 63%, 98% 57%, 86% 73%, 100% 80%, 85% 89%, 100% 100%, 0 100%);
+    }
+
     &--arm-l,
     &--arm-r {
       @include w-h( 9vmin, 27vmin );
