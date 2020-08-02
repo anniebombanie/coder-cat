@@ -11,7 +11,9 @@ html {
 /* --- Colours --- */
 $w: #fff;
 $b: #000;
-$g1: #eaeaea;
+$g1: #d3d3d3;
+$g2: #a8a8a8;
+$g3: #7e7e7e;
 $t: transparent;
 
 @mixin pseduo-div( $w, $h ) {
@@ -45,13 +47,21 @@ body {
   margin: 0;
   @include w-h( 100%, 100% );
   // background-image: url("../resources/coder-cat.jpg");
-  background-size: 1400px;
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
+  // background-size: 1400px;
+  // background-repeat: no-repeat;
+  // background-position: 50% 100%;
   position: relative;
 
   @media only screen and (orientation: landscape) {
     display: flex;
+  }
+
+  // dots
+  &::before {
+    @include pseduo-div( 100%, 100% );
+    background: radial-gradient( circle at center, $b 1px, $t 1% );
+    background-repeat: repeat;
+    background-size: 8px 8px;
   }
 }
 
@@ -93,6 +103,7 @@ p {
 .b2 {
   border: 10px solid $b;
   position: relative;
+  overflow: hidden;
   @include w-h( 100%, 50% );
 
   @media only screen and (orientation: landscape) {
@@ -168,29 +179,31 @@ p {
     }
 
     &--body {
-      @include w-h( 38vmin, 18vmin );
+      @include w-h( 36vmin, 18vmin );
       // box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b;
       background-color: $g1;
       border-radius: 80% 80% 0% 0% / 100% 100% 0% 0;
       position: absolute;
-      @include t-l( 41.6%, 26% );
+      border: 1px solid green;
+      @include t-l( 41.6%, 28% );
       background: radial-gradient( 1% 2.2% at 50% 90%, $w 12vmin, $g1 12.1vmin  );
     }
   }
 
   &__table {
-    @include w-h( 100vmin, 0.5vmin );
-    background-color: $b;
+    @include w-h( 100vmin, 50vmin );
+    background-color: $w;
+    border-top: 2px solid $b;
     position: absolute;
     @include t-l( 50%, 50% );
-    transform: translate3d( -50%, 25vmin, 0 );
+    transform: translate3d( -50%, 10vmin, 0 );
   }
 
   &__computer {
     @include w-h( 41vmin, 30vmin );
     // border: 1px solid blue;
     position: absolute;
-    @include t-l( 59%, 6% );
+    @include t-l( 40%, 6% );
 
     &::before,
     &::after {
@@ -199,16 +212,16 @@ p {
 
     // keyboard
     &::before {
-      @include pseduo-div( 25vmin, 12vmin );
+      @include pseduo-div( 25vmin, 13vmin );
       box-shadow:
         0.2vmin 0.2vmin 0 0 $b,
         0.4vmin 0.4vmin 0 0 $b,
         0.6vmin 0.6vmin 0 0 $b,
         0.8vmin 0.8vmin 0 0 $b,
         1vmin 1vmin 0 0 $b;
-      @include t-l( 61%, 36% );
-      border-radius: 5%;
-      background-color: $w;
+      @include t-l( 58.6%, 36.8% );
+      border-radius: 8%;
+      background-color: $g3;
       transform: rotate( 15deg ) skewX( -35deg );
     }
 
@@ -219,7 +232,7 @@ p {
       transform: skewY( 15deg );
       @include t-l( 17%, 0.5% );
       border-radius: 5%;
-      background-color: $w;
+      background-color: $g2;
     }
   }
 }
@@ -239,7 +252,7 @@ p {
       background-color: $g1;
       border: 1px solid green;
       // box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b;
-      @include t-l( 15%, 18% );
+      @include t-l( 15%, 20% );
       transform: rotate( -30deg );
       background: linear-gradient( $t 11%, $g1 10.1%);
     }
