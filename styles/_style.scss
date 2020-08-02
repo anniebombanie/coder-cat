@@ -154,7 +154,7 @@ p {
       background-color: $g1;
       border-radius: 20%;
       border: 0.5vmin solid $b;
-      clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon( 0% 0%, 100% 100%, 0% 100% );
     }
 
     &--ear-l {
@@ -171,9 +171,10 @@ p {
       @include w-h( 38vmin, 18vmin );
       // box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b;
       background-color: $g1;
-      border-radius: 60% 60% 0% 0% / 100% 100% 0% 0;
+      border-radius: 80% 80% 0% 0% / 100% 100% 0% 0;
       position: absolute;
-      @include t-l( 42%, 26% );
+      @include t-l( 41.6%, 26% );
+      background: radial-gradient( 1% 2.2% at 50% 90%, $w 12vmin, $g1 12.1vmin  );
     }
   }
 
@@ -233,12 +234,23 @@ p {
 
   &__cat {
     &--arm-l {
-      @include w-h( 10vmin, 26vmin );
+      @include w-h( 9vmin, 26vmin );
+      position: absolute;
+      background-color: $g1;
+      border: 1px solid green;
+      // box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b;
+      @include t-l( 15%, 18% );
+      transform: rotate( -30deg );
+      background: linear-gradient( $t 11%, $g1 10.1%);
+    }
+
+    &--arm-r {
+      @include w-h( 9vmin, 26vmin );
       position: absolute;
       background-color: $g1;
       box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b;
-      @include t-l( 17%, 18% );
-      transform: rotate( -32deg );
+      @include t-l( 15%, 75% );
+      transform: rotate( 30deg );
       // background:
     }
   }
