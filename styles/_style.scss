@@ -141,7 +141,7 @@ p {
     transform: translate3d( -50%, -20%, 0 );
 
     @media only screen and (orientation: landscape) {
-      transform: translate3d( -50%, -30%, 0 );
+      transform: translate3d( -50%, -25%, 0 );
     }
 
     &--head {
@@ -364,7 +364,7 @@ p {
 
   &__cat {
     &--circle {
-      @include w-h( 90%, 70% );
+      @include w-h( 100%, 80% );
       @include t-l( 50%, 50% );
       transform: translate3d( -47%, -75%, 0 );
       position: relative;
