@@ -151,7 +151,7 @@ p {
       box-shadow: 0.5vmin 0 0 0 $b, -0.5vmin 0 0 0 $b, 0 -0.5vmin 0 0 $b;
       @include t-l( 17%, 33% );
 
-      &-snout {
+      .snout {
         @include w-h( 15vmin, 10vmin );
         position: absolute;
         border-radius: 50%;
@@ -163,6 +163,23 @@ p {
           border-radius: 45% 45% 70% 70% / 40% 40% 100% 100%;
           background-color: $b;
           @include t-l( 10%, 39% );
+        }
+      }
+
+      .whiskers {
+        &--l,
+        &--r {
+          @include w-h( 6vmin, 0.4vmin );
+          position: absolute;
+          background-color: $g3;
+          border-radius: 15% 15% 10% 10% / 100%;
+
+          &::after,
+          &::before {
+            @include pseduo-div( 100%, 100% );
+            background-color: $g3;
+            border-radius: 15% 15% 10% 10% / 100%;
+          }
         }
       }
     }
@@ -225,50 +242,50 @@ p {
         linear-gradient( $t 10%, $g1 10% );
       }
     }
+  }
 
-    &--table {
-      @include w-h( 200%, 50vmin );
-      @include t-l( 50%, 50% );
-      background: linear-gradient( $w 20%, $g1 );
-      border-top: 2px solid $b;
-      position: absolute;
-      transform: translate3d( -50%, 10vmin, 0 );
+  &__table {
+    @include w-h( 200%, 50vmin );
+    @include t-l( 50%, 50% );
+    background: linear-gradient( $w 20%, $g1 );
+    border-top: 2px solid $b;
+    position: absolute;
+    transform: translate3d( -50%, 25vmin, 0 );
+  }
+
+  &__computer {
+    @include w-h( 41vmin, 30vmin );
+    position: absolute;
+    @include t-l( 60%, 6% );
+
+    &::before,
+    &::after {
+      border: 0.5vmin solid $b;
     }
 
-    &--computer {
-      @include w-h( 41vmin, 30vmin );
-      position: absolute;
-      @include t-l( 40%, 6% );
+    // keyboard
+    &::before {
+      @include pseduo-div( 25vmin, 13vmin );
+      box-shadow:
+        0.2vmin 0.2vmin 0 0 $b,
+        0.4vmin 0.4vmin 0 0 $b,
+        0.6vmin 0.6vmin 0 0 $b,
+        0.8vmin 0.8vmin 0 0 $b,
+        1vmin 1vmin 0 0 $b;
+      @include t-l( 58.6%, 36.8% );
+      border-radius: 8%;
+      background-color: $g3;
+      transform: rotate( 15deg ) skewX( -35deg );
+    }
 
-      &::before,
-      &::after {
-        border: 0.5vmin solid $b;
-      }
-
-      // keyboard
-      &::before {
-        @include pseduo-div( 25vmin, 13vmin );
-        box-shadow:
-          0.2vmin 0.2vmin 0 0 $b,
-          0.4vmin 0.4vmin 0 0 $b,
-          0.6vmin 0.6vmin 0 0 $b,
-          0.8vmin 0.8vmin 0 0 $b,
-          1vmin 1vmin 0 0 $b;
-        @include t-l( 58.6%, 36.8% );
-        border-radius: 8%;
-        background-color: $g3;
-        transform: rotate( 15deg ) skewX( -35deg );
-      }
-
-      // top
-      &::after {
-        @include pseduo-div( 34vmin, 24vmin );
-        border-right: 1vmin solid $b;
-        transform: skewY( 15deg );
-        @include t-l( 17%, 0.5% );
-        border-radius: 5%;
-        background-color: $g2;
-      }
+    // top
+    &::after {
+      @include pseduo-div( 34vmin, 24vmin );
+      border-right: 1vmin solid $b;
+      transform: skewY( 15deg );
+      @include t-l( 17%, 0.5% );
+      border-radius: 5%;
+      background-color: $g2;
     }
   }
 
@@ -306,7 +323,7 @@ p {
       radial-gradient( 1% 2% at 74% 49%, $b 1.7vmin, $t 1.8vmin ),
       $g1;
 
-      &-snout {
+      .snout {
         background:
           // mouth
           linear-gradient( $g1 30%, $t 30.5% ),
@@ -315,6 +332,38 @@ p {
           radial-gradient( 1% 1.6% at 64.5% 28%, $g1 1.8vmin, $t 1.9vmin ),
           radial-gradient( 1% 1.6% at 64% 28%, $b 2.2vmin, $t 2.3vmin ),
           radial-gradient( 1% 1.4% at 51.5% 46%, $b 2.5vmin, $t 2.7vmin );
+      }
+
+      .whiskers {
+        &--l {
+          transform: rotate( 5deg );
+          @include t-l( 65%, -7% );
+
+          &::before {
+            transform: rotate( 5deg );
+            @include t-l( -300%, 0 );
+          }
+
+          &::after {
+            transform: rotate( -5deg );
+            @include t-l( 300%, 1% );
+          }
+        }
+
+        &--r {
+          transform: rotate( -5deg );
+          @include t-l( 65%, 85% );
+
+          &::before {
+            transform: rotate( -5deg );
+            @include t-l( -300%, 0 );
+          }
+
+          &::after {
+            transform: rotate( 5deg );
+            @include t-l( 300%, 1% );
+          }
+        }
       }
     }
 
@@ -379,7 +428,7 @@ p {
       background-color: $b;
       border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
       background:
-        linear-gradient( $t 15.5%, $b 15% );
+        linear-gradient( $t 14.5%, $b 15% );
 
       &::before {
         @include pseduo-div( 97%, 97% );
@@ -402,13 +451,45 @@ p {
       radial-gradient( 1% 2% at 72% 49%, $b 1.4vmin, $t 1.5vmin ),
       $g1;
 
-      &-snout {
+      .snout {
         background:
           // mouth
           linear-gradient( $g1 25%, $t 25.5%, $t 53.5%, $g1 54% ),
           radial-gradient( 1% 1% at 51% 65%, $g1 3.2vmin, $t 3.4vmin ),
           radial-gradient( 1% 1.2% at 51% 64%, $b 3.2vmin, $t 3.4vmin ),
           linear-gradient( 90deg, $t 50%, $b 50%, $b 53%, $t 53% );
+      }
+
+      .whiskers {
+        &--l {
+          transform: rotate( -5deg );
+          @include t-l( 70%, -7% );
+
+          &::before {
+            @include t-l( -300%, 0 );
+            transform: rotate( 5deg );
+          }
+
+          &::after {
+            @include t-l( 300%, 1% );
+            transform: rotate( -5deg );
+          }
+        }
+
+        &--r {
+          transform: rotate( 5deg );
+          @include t-l( 70%, 85% );
+
+          &::before {
+            @include t-l( -300%, 0 );
+            transform: rotate( -5deg );
+          }
+
+          &::after {
+            @include t-l( 300%, -1% );
+            transform: rotate( 5deg );
+          }
+        }
       }
     }
 

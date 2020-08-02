@@ -153,8 +153,8 @@ p.desc {
   left: 33%;
 }
 
-.b1__cat--head-snout,
-.b2__cat--head-snout {
+.b1__cat--head .snout,
+.b2__cat--head .snout {
   width: 15vmin;
   height: 10vmin;
   position: absolute;
@@ -163,8 +163,8 @@ p.desc {
   left: 22.5%;
 }
 
-.b1__cat--head-snout:after,
-.b2__cat--head-snout:after {
+.b1__cat--head .snout:after,
+.b2__cat--head .snout:after {
   content: '';
   width: 3.5vmin;
   height: 2.2vmin;
@@ -174,6 +174,30 @@ p.desc {
   background-color: #000;
   top: 10%;
   left: 39%;
+}
+
+.b1__cat--head .whiskers--l, .b1__cat--head .whiskers--r,
+.b2__cat--head .whiskers--l,
+.b2__cat--head .whiskers--r {
+  width: 6vmin;
+  height: 0.4vmin;
+  position: absolute;
+  background-color: #7e7e7e;
+  border-radius: 15% 15% 10% 10% / 100%;
+}
+
+.b1__cat--head .whiskers--l::after, .b1__cat--head .whiskers--l::before, .b1__cat--head .whiskers--r::after, .b1__cat--head .whiskers--r::before,
+.b2__cat--head .whiskers--l::after,
+.b2__cat--head .whiskers--l::before,
+.b2__cat--head .whiskers--r::after,
+.b2__cat--head .whiskers--r::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: #7e7e7e;
+  border-radius: 15% 15% 10% 10% / 100%;
 }
 
 .b1__cat--ear-l, .b1__cat--ear-r,
@@ -267,8 +291,8 @@ p.desc {
   background: radial-gradient(1% 2.2% at 50% 100%, #fff 12vmin, transparent 12.1vmin), linear-gradient(transparent 10%, #d3d3d3 10%);
 }
 
-.b1__cat--table,
-.b2__cat--table {
+.b1__table,
+.b2__table {
   width: 200%;
   height: 50vmin;
   top: 50%;
@@ -277,27 +301,27 @@ p.desc {
   background: linear-gradient(#fff 20%, #d3d3d3);
   border-top: 2px solid #000;
   position: absolute;
-  -webkit-transform: translate3d(-50%, 10vmin, 0);
-          transform: translate3d(-50%, 10vmin, 0);
+  -webkit-transform: translate3d(-50%, 25vmin, 0);
+          transform: translate3d(-50%, 25vmin, 0);
 }
 
-.b1__cat--computer,
-.b2__cat--computer {
+.b1__computer,
+.b2__computer {
   width: 41vmin;
   height: 30vmin;
   position: absolute;
-  top: 40%;
+  top: 60%;
   left: 6%;
 }
 
-.b1__cat--computer::before, .b1__cat--computer::after,
-.b2__cat--computer::before,
-.b2__cat--computer::after {
+.b1__computer::before, .b1__computer::after,
+.b2__computer::before,
+.b2__computer::after {
   border: 0.5vmin solid #000;
 }
 
-.b1__cat--computer::before,
-.b2__cat--computer::before {
+.b1__computer::before,
+.b2__computer::before {
   content: '';
   width: 25vmin;
   height: 13vmin;
@@ -313,8 +337,8 @@ p.desc {
           transform: rotate(15deg) skewX(-35deg);
 }
 
-.b1__cat--computer::after,
-.b2__cat--computer::after {
+.b1__computer::after,
+.b2__computer::after {
   content: '';
   width: 34vmin;
   height: 24vmin;
@@ -364,9 +388,51 @@ p.desc {
   background: linear-gradient(transparent 50%, #d3d3d3 50.5%), radial-gradient(1.1% 2% at 25% 50%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 25% 49%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1.1% 2% at 74% 50%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 74% 49%, #000 1.7vmin, transparent 1.8vmin), #d3d3d3;
 }
 
-.b1__cat--head-snout {
+.b1__cat--head .snout {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #d3d3d3), color-stop(30.5%, transparent)), radial-gradient(1% 1.6% at 37.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 38% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.6% at 64.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 64% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.4% at 51.5% 46%, #000 2.5vmin, transparent 2.7vmin);
   background: linear-gradient(#d3d3d3 30%, transparent 30.5%), radial-gradient(1% 1.6% at 37.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 38% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.6% at 64.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 64% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.4% at 51.5% 46%, #000 2.5vmin, transparent 2.7vmin);
+}
+
+.b1__cat--head .whiskers--l {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  top: 65%;
+  left: -7%;
+}
+
+.b1__cat--head .whiskers--l::before {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  top: -300%;
+  left: 0;
+}
+
+.b1__cat--head .whiskers--l::after {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  top: 300%;
+  left: 1%;
+}
+
+.b1__cat--head .whiskers--r {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  top: 65%;
+  left: 85%;
+}
+
+.b1__cat--head .whiskers--r::before {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  top: -300%;
+  left: 0;
+}
+
+.b1__cat--head .whiskers--r::after {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  top: 300%;
+  left: 1%;
 }
 
 .b1__cat--arm-l, .b1__cat--arm-r {
@@ -434,8 +500,8 @@ p.desc {
   position: absolute;
   background-color: #000;
   border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(15.5%, transparent), color-stop(15%, #000));
-  background: linear-gradient(transparent 15.5%, #000 15%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(14.5%, transparent), color-stop(15%, #000));
+  background: linear-gradient(transparent 14.5%, #000 15%);
 }
 
 .b2__cat--body::before {
@@ -456,9 +522,51 @@ p.desc {
   background: linear-gradient(#d3d3d3 40.5%, transparent 41%), linear-gradient(90deg, transparent 36%, #d3d3d3 37%, #d3d3d3 60%, transparent 61.5%), radial-gradient(1.1% 0.3% at 51% 37%, #d3d3d3 10vmin, transparent 10.4vmin), radial-gradient(1.1% 0.3% at 51% 39%, #000 10vmin, transparent 10.4vmin), radial-gradient(1% 2% at 27% 49%, #000 1.4vmin, transparent 1.5vmin), radial-gradient(1% 2% at 72% 49%, #000 1.4vmin, transparent 1.5vmin), #d3d3d3;
 }
 
-.b2__cat--head-snout {
+.b2__cat--head .snout {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #d3d3d3), color-stop(25.5%, transparent), color-stop(53.5%, transparent), color-stop(54%, #d3d3d3)), radial-gradient(1% 1% at 51% 65%, #d3d3d3 3.2vmin, transparent 3.4vmin), radial-gradient(1% 1.2% at 51% 64%, #000 3.2vmin, transparent 3.4vmin), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #000), color-stop(53%, #000), color-stop(53%, transparent));
   background: linear-gradient(#d3d3d3 25%, transparent 25.5%, transparent 53.5%, #d3d3d3 54%), radial-gradient(1% 1% at 51% 65%, #d3d3d3 3.2vmin, transparent 3.4vmin), radial-gradient(1% 1.2% at 51% 64%, #000 3.2vmin, transparent 3.4vmin), linear-gradient(90deg, transparent 50%, #000 50%, #000 53%, transparent 53%);
+}
+
+.b2__cat--head .whiskers--l {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  top: 70%;
+  left: -7%;
+}
+
+.b2__cat--head .whiskers--l::before {
+  top: -300%;
+  left: 0;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+}
+
+.b2__cat--head .whiskers--l::after {
+  top: 300%;
+  left: 1%;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.b2__cat--head .whiskers--r {
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
+  top: 70%;
+  left: 85%;
+}
+
+.b2__cat--head .whiskers--r::before {
+  top: -300%;
+  left: 0;
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
+
+.b2__cat--head .whiskers--r::after {
+  top: 300%;
+  left: -1%;
+  -webkit-transform: rotate(5deg);
+          transform: rotate(5deg);
 }
 
 .b2__cat--arm-r {
