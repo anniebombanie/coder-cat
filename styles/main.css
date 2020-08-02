@@ -365,8 +365,8 @@ p.desc {
   width: 9vmin;
   height: 28vmin;
   position: absolute;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, transparent), color-stop(15.1%, #d3d3d3)), radial-gradient(1% 0.6% at 48% 18%, #d3d3d3 1vmin, #d3d3d3 1.9vmin, transparent 2vmin), radial-gradient(1% 0.5% at 80% 18%, #d3d3d3 0.8vmin, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 1.86vmin), radial-gradient(1% 0.5% at 20% 18%, #d3d3d3 0.8vmin, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 1.86vmin), radial-gradient(1% 0.6% at 48% 18%, #d3d3d3 1vmin, #d3d3d3 1.9vmin, #000 2vmin, #000 2.3vmin, transparent 2.36vmin), -webkit-gradient(linear, left top, left bottom, color-stop(15%, transparent), color-stop(15.1%, #d3d3d3));
-  background: linear-gradient(transparent 15%, #d3d3d3 15.1%), radial-gradient(1% 0.6% at 48% 18%, #d3d3d3 1vmin, #d3d3d3 1.9vmin, transparent 2vmin), radial-gradient(1% 0.5% at 80% 18%, #d3d3d3 0.8vmin, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 1.86vmin), radial-gradient(1% 0.5% at 20% 18%, #d3d3d3 0.8vmin, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 1.86vmin), radial-gradient(1% 0.6% at 48% 18%, #d3d3d3 1vmin, #d3d3d3 1.9vmin, #000 2vmin, #000 2.3vmin, transparent 2.36vmin), linear-gradient(transparent 15%, #d3d3d3 15.1%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, transparent), color-stop(15.1%, #d3d3d3)), radial-gradient(1% 0.6% at 48% 18%, #d3d3d3 1vmin, #d3d3d3 1.9vmin, transparent 2vmin), radial-gradient(1% 0.5% at 80% 18%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 1.86vmin), radial-gradient(1% 0.5% at 20% 18%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 1.86vmin), radial-gradient(1% 0.6% at 48% 18%, #d3d3d3 1.9vmin, #000 2vmin, #000 2.3vmin, transparent 2.36vmin), -webkit-gradient(linear, left top, left bottom, color-stop(15%, transparent), color-stop(15.1%, #d3d3d3));
+  background: linear-gradient(transparent 15%, #d3d3d3 15.1%), radial-gradient(1% 0.6% at 48% 18%, #d3d3d3 1vmin, #d3d3d3 1.9vmin, transparent 2vmin), radial-gradient(1% 0.5% at 80% 18%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 1.86vmin), radial-gradient(1% 0.5% at 20% 18%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 1.86vmin), radial-gradient(1% 0.6% at 48% 18%, #d3d3d3 1.9vmin, #000 2vmin, #000 2.3vmin, transparent 2.36vmin), linear-gradient(transparent 15%, #d3d3d3 15.1%);
 }
 
 .b1__cat--arm-l::before, .b1__cat--arm-r::before {
@@ -432,10 +432,52 @@ p.desc {
 }
 
 .b2__cat--head {
-  background: radial-gradient(1% 2% at 25% 49%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1% 2% at 74% 49%, #000 1.7vmin, transparent 1.8vmin), #d3d3d3;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40.5%, #d3d3d3), color-stop(41%, transparent)), -webkit-gradient(linear, left top, right top, color-stop(36%, transparent), color-stop(37%, #d3d3d3), color-stop(60%, #d3d3d3), color-stop(61.5%, transparent)), radial-gradient(1.1% 0.3% at 51% 37%, #d3d3d3 10vmin, transparent 10.4vmin), radial-gradient(1.1% 0.3% at 51% 39%, #000 10vmin, transparent 10.4vmin), radial-gradient(1% 2% at 27% 49%, #000 1.4vmin, transparent 1.5vmin), radial-gradient(1% 2% at 72% 49%, #000 1.4vmin, transparent 1.5vmin), #d3d3d3;
+  background: linear-gradient(#d3d3d3 40.5%, transparent 41%), linear-gradient(90deg, transparent 36%, #d3d3d3 37%, #d3d3d3 60%, transparent 61.5%), radial-gradient(1.1% 0.3% at 51% 37%, #d3d3d3 10vmin, transparent 10.4vmin), radial-gradient(1.1% 0.3% at 51% 39%, #000 10vmin, transparent 10.4vmin), radial-gradient(1% 2% at 27% 49%, #000 1.4vmin, transparent 1.5vmin), radial-gradient(1% 2% at 72% 49%, #000 1.4vmin, transparent 1.5vmin), #d3d3d3;
 }
 
 .b2__cat--head-snout {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #d3d3d3), color-stop(25%, transparent), color-stop(53.5%, transparent), color-stop(54%, #d3d3d3)), radial-gradient(1% 1% at 51% 65%, #d3d3d3 3.2vmin, transparent 3.4vmin), radial-gradient(1% 1.2% at 51% 64%, #000 3.2vmin, transparent 3.4vmin), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #000), color-stop(53%, #000), color-stop(53%, transparent));
   background: linear-gradient(#d3d3d3 25%, transparent 25%, transparent 53.5%, #d3d3d3 54%), radial-gradient(1% 1% at 51% 65%, #d3d3d3 3.2vmin, transparent 3.4vmin), radial-gradient(1% 1.2% at 51% 64%, #000 3.2vmin, transparent 3.4vmin), linear-gradient(90deg, transparent 50%, #000 50%, #000 53%, transparent 53%);
+}
+
+.b2__cat--arm-r {
+  width: 8vmin;
+  height: 20vmin;
+  position: absolute;
+  top: 42%;
+  left: 64%;
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+  border-radius: 100% 100% 0% 0% / 100% 50% 0% 100%;
+  border: 3px solid #000;
+  background-color: #d3d3d3;
+}
+
+.b2__cat--arm-r::after {
+  content: '';
+  width: 100%;
+  height: 45%;
+  display: block;
+  position: absolute;
+  top: -7%;
+  left: -23%;
+  border-radius: 30% 100% 100% 40% / 100% 100% 100% 90%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #000), color-stop(6%, #d3d3d3), color-stop(95%, #d3d3d3), color-stop(96%, #000));
+  background: linear-gradient(#000 5%, #d3d3d3 6%, #d3d3d3 95%, #000 96%);
+}
+
+.b2__cat--arm-r::before {
+  content: '';
+  width: 160%;
+  height: 45%;
+  display: block;
+  position: absolute;
+  top: -6%;
+  left: -50%;
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+  background: radial-gradient(1% 1.2% at 20% 47%, #d3d3d3 1.6vmin, #000 1.7vmin, #000 2vmin, transparent 2.2vmin), radial-gradient(1% 1.2% at 25% 21%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 2vmin), radial-gradient(1% 1.2% at 25% 79%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 2vmin);
 }
