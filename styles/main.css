@@ -144,18 +144,16 @@ p.desc {
           box-shadow: 0.5vmin 0 0 0 #000, -0.5vmin 0 0 0 #000, 0 -0.5vmin 0 0 #000;
   top: 17%;
   left: 33%;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(54%, transparent), color-stop(54.5%, #d3d3d3)), radial-gradient(1.1% 2% at 25% 53%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 25% 52%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1.1% 2% at 74% 53%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 74% 52%, #000 1.7vmin, transparent 1.8vmin), #d3d3d3;
-  background: linear-gradient(transparent 54%, #d3d3d3 54.5%), radial-gradient(1.1% 2% at 25% 53%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 25% 52%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1.1% 2% at 74% 53%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 74% 52%, #000 1.7vmin, transparent 1.8vmin), #d3d3d3;
 }
 
 .b1__cat--head-snout,
 .b2__cat--head-snout {
-  width: 17vmin;
+  width: 15vmin;
   height: 10vmin;
   position: absolute;
   border-radius: 50%;
   top: 51%;
-  left: 19%;
+  left: 22.5%;
 }
 
 .b1__cat--head-snout:after,
@@ -168,7 +166,7 @@ p.desc {
   border-radius: 45% 45% 70% 70% / 40% 40% 100% 100%;
   background-color: #000;
   top: 10%;
-  left: 38%;
+  left: 39%;
 }
 
 .b1__cat--ear-l, .b1__cat--ear-r,
@@ -353,6 +351,16 @@ p.desc {
           clip-path: polygon(14% 93%, 2% 84%, 17% 81%, 5% 66%, 23% 70%, 5% 41%, 30% 57%, 22% 24%, 40% 51%, 48% 12%, 55% 51%, 75% 25%, 66% 57%, 90% 45%, 72% 68%, 99% 63%, 77% 80%, 100% 80%, 83% 92%, 100% 100%, 0 100%);
 }
 
+.b1__cat--head {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, transparent), color-stop(50.5%, #d3d3d3)), radial-gradient(1.1% 2% at 25% 50%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 25% 49%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1.1% 2% at 74% 50%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 74% 49%, #000 1.7vmin, transparent 1.8vmin), #d3d3d3;
+  background: linear-gradient(transparent 50%, #d3d3d3 50.5%), radial-gradient(1.1% 2% at 25% 50%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 25% 49%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1.1% 2% at 74% 50%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 74% 49%, #000 1.7vmin, transparent 1.8vmin), #d3d3d3;
+}
+
+.b1__cat--head-snout {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #d3d3d3), color-stop(30.5%, transparent)), radial-gradient(1% 1.6% at 37.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 38% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.6% at 64.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 64% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.4% at 51.5% 46%, #000 2.5vmin, transparent 2.7vmin);
+  background: linear-gradient(#d3d3d3 30%, transparent 30.5%), radial-gradient(1% 1.6% at 37.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 38% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.6% at 64.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 64% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.4% at 51.5% 46%, #000 2.5vmin, transparent 2.7vmin);
+}
+
 .b1__cat--arm-l, .b1__cat--arm-r {
   width: 9vmin;
   height: 28vmin;
@@ -387,11 +395,6 @@ p.desc {
           transform: rotate(30deg);
 }
 
-.b1__cat--head-snout {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #d3d3d3), color-stop(30.5%, transparent)), radial-gradient(1% 1.6% at 36.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 37% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.6% at 60.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 60% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.4% at 49.5% 46%, #000 2.5vmin, transparent 2.7vmin);
-  background: linear-gradient(#d3d3d3 30%, transparent 30.5%), radial-gradient(1% 1.6% at 36.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 37% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.6% at 60.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 60% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.4% at 49.5% 46%, #000 2.5vmin, transparent 2.7vmin);
-}
-
 .b2 {
   border-top: 5px solid #000;
 }
@@ -401,4 +404,38 @@ p.desc {
     border-top: 10px solid #000;
     border-left: 5px solid #000;
   }
+}
+
+.b2__cat--body {
+  width: 36vmin;
+  height: 18vmin;
+  top: 41.6%;
+  left: 27.2%;
+  position: absolute;
+  background-color: #000;
+  border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15.5%, transparent), color-stop(15%, #000));
+  background: linear-gradient(transparent 15.5%, #000 15%);
+}
+
+.b2__cat--body::before {
+  content: '';
+  width: 97%;
+  height: 97%;
+  display: block;
+  position: absolute;
+  top: 1.5%;
+  left: 1.5%;
+  border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
+  background: radial-gradient(1% 2.2% at 50% 100%, #fff 12vmin, transparent 12.1vmin), -webkit-gradient(linear, left top, left bottom, color-stop(10%, transparent), color-stop(10%, #d3d3d3));
+  background: radial-gradient(1% 2.2% at 50% 100%, #fff 12vmin, transparent 12.1vmin), linear-gradient(transparent 10%, #d3d3d3 10%);
+}
+
+.b2__cat--head {
+  background: radial-gradient(1% 2% at 25% 49%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1% 2% at 74% 49%, #000 1.7vmin, transparent 1.8vmin), #d3d3d3;
+}
+
+.b2__cat--head-snout {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #d3d3d3), color-stop(25%, transparent), color-stop(53.5%, transparent), color-stop(54%, #d3d3d3)), radial-gradient(1% 1% at 51% 65%, #d3d3d3 3.2vmin, transparent 3.4vmin), radial-gradient(1% 1.2% at 51% 64%, #000 3.2vmin, transparent 3.4vmin), -webkit-gradient(linear, left top, right top, color-stop(50%, transparent), color-stop(50%, #000), color-stop(53%, #000), color-stop(53%, transparent));
+  background: linear-gradient(#d3d3d3 25%, transparent 25%, transparent 53.5%, #d3d3d3 54%), radial-gradient(1% 1% at 51% 65%, #d3d3d3 3.2vmin, transparent 3.4vmin), radial-gradient(1% 1.2% at 51% 64%, #000 3.2vmin, transparent 3.4vmin), linear-gradient(90deg, transparent 50%, #000 50%, #000 53%, transparent 53%);
 }
