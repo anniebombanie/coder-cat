@@ -405,7 +405,7 @@ p {
       &-snout {
         background:
           // mouth
-          linear-gradient( $g1 25%, $t 25%, $t 53.5%, $g1 54% ),
+          linear-gradient( $g1 25%, $t 25.5%, $t 53.5%, $g1 54% ),
           radial-gradient( 1% 1% at 51% 65%, $g1 3.2vmin, $t 3.4vmin ),
           radial-gradient( 1% 1.2% at 51% 64%, $b 3.2vmin, $t 3.4vmin ),
           linear-gradient( 90deg, $t 50%, $b 50%, $b 53%, $t 53% );
