@@ -325,6 +325,10 @@ p {
       @include w-h( 9vmin, 28vmin );
       position: absolute;
       background:
+        radial-gradient( 1% 0.35% at 79% 17%, rgba( $w, 0.6 ) 0.5vmin, rgba( $w, 0.6 ) 0.9vmin, $t 1vmin ),
+        radial-gradient( 1% 0.35% at 48% 12%, rgba( $w, 0.6 ) 0.5vmin, rgba( $w, 0.6 ) 0.9vmin, $t 1vmin ),
+        radial-gradient( 1% 0.35% at 21% 17%, rgba( $w, 0.6 ) 0.5vmin, rgba( $w, 0.6 ) 0.9vmin, $t 1vmin ),
+        radial-gradient( 1% 0.35% at 51% 28%, rgba( $w, 0.6 ) 1vmin, rgba( $w, 0.6 ) 1.9vmin, $t 2vmin ),
         linear-gradient( $t 15%, $g1 15.1%),
         radial-gradient( 1% 0.6% at 48% 18%, $g1 1vmin, $g1 1.9vmin, $t 2vmin ),
         radial-gradient( 1% 0.5% at 80% 18%, $g1 1.4vmin, $b 1.5vmin, $b 1.8vmin, $t 1.86vmin ),
