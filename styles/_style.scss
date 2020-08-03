@@ -47,18 +47,9 @@ body {
   margin: 0;
   @include w-h( 100%, 100% );
   position: relative;
-  background: linear-gradient( $g1, $w );
 
   @media only screen and (min-width : 640px) and ( orientation: landscape) {
     display: flex;
-  }
-
-  // dots
-  &::before {
-    @include pseduo-div( 100%, 100% );
-    background: radial-gradient( circle at center, $b 1px, $t 1% );
-    background-repeat: repeat;
-    background-size: 8px 8px;
   }
 }
 
@@ -128,10 +119,19 @@ p {
   border: 10px solid $b;
   position: relative;
   overflow: hidden;
+  background: linear-gradient( $g1, $w );
   @include w-h( 100%, 50% );
 
   @media only screen and (min-width: 640px) and ( orientation: landscape) {
     @include w-h( 50%, 100% );
+  }
+
+  // dots
+  &::before {
+    @include pseduo-div( 100%, 100% );
+    background: radial-gradient( circle at center, $b 1px, $t 1% );
+    background-repeat: repeat;
+    background-size: 8px 8px;
   }
 
   &__cat {
