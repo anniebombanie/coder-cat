@@ -248,7 +248,7 @@ p {
   &__table {
     @include w-h( 200%, 100vmin );
     @include t-l( 50%, 50% );
-    background: linear-gradient( $w, $g3 );
+    background: linear-gradient( $w, $g1 );
     border-top: 2px solid $b;
     position: absolute;
     transform: translate3d( -50%, 25vmin, 0 );
