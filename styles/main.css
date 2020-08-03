@@ -33,7 +33,7 @@ body {
   background-color: #e4e4e4;
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-width: 640px) and (orientation: landscape) {
   .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -63,12 +63,12 @@ p.desc {
   background-color: #000;
   color: #fff;
   padding: 2%;
-  font-size: 20px;
+  font-size: 1.2rem;
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-width: 767px) and (orientation: landscape) {
   p.desc {
-    font-size: 27px;
+    font-size: 1.5rem;
   }
 }
 
@@ -85,23 +85,24 @@ p.desc {
 
 .bubble p:first-child {
   font-style: italic;
-  font-size: 30px;
+  font-size: 2.5rem;
+  margin-top: -2%;
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-width: 767px) and (orientation: landscape) {
   .bubble p:first-child {
-    font-size: 60px;
+    font-size: 4rem;
   }
 }
 
 .bubble p:last-child {
-  font-size: 20px;
+  font-size: 1.4rem;
   text-transform: uppercase;
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-width: 767px) and (orientation: landscape) {
   .bubble p:last-child {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
 }
 
@@ -114,7 +115,7 @@ p.desc {
   height: 50%;
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-width: 640px) and (orientation: landscape) {
   .b1,
   .b2 {
     width: 50%;
@@ -133,7 +134,7 @@ p.desc {
           transform: translate3d(-50%, -20%, 0);
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-width: 640px) and (orientation: landscape) {
   .b1__cat,
   .b2__cat {
     -webkit-transform: translate3d(-50%, -25%, 0);
@@ -213,7 +214,7 @@ p.desc {
           clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-width: 640px) and (orientation: landscape) {
   .b1__cat--ear-l, .b1__cat--ear-r,
   .b2__cat--ear-l,
   .b2__cat--ear-r {
@@ -297,8 +298,8 @@ p.desc {
   height: 100vmin;
   top: 50%;
   left: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #fff), to(#d3d3d3));
-  background: linear-gradient(#fff 20%, #d3d3d3);
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#7e7e7e));
+  background: linear-gradient(#fff, #7e7e7e);
   border-top: 2px solid #000;
   position: absolute;
   -webkit-transform: translate3d(-50%, 25vmin, 0);
@@ -363,7 +364,7 @@ p.desc {
   border-bottom: 0;
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-width: 640px) and (orientation: landscape) {
   .b1 {
     border-bottom: 10px solid #000;
     border-right: 5px solid #000;
@@ -473,7 +474,7 @@ p.desc {
   border-top: 5px solid #000;
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (min-width: 640px) and (orientation: landscape) {
   .b2 {
     border-top: 10px solid #000;
     border-left: 5px solid #000;

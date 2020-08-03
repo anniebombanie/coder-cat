@@ -50,7 +50,7 @@ body {
   position: relative;
   background-color: $g0;
 
-  @media only screen and (orientation: landscape) {
+  @media only screen and (min-width : 640px) and ( orientation: landscape) {
     display: flex;
   }
 
@@ -73,10 +73,10 @@ p {
     background-color: $b;
     color: $w;
     padding: 2%;
-    font-size: 20px;
+    font-size: 1.2rem;
 
-    @media only screen and (orientation: landscape) {
-      font-size: 27px;
+    @media only screen and (min-width: 767px) and ( orientation: landscape) {
+      font-size: 1.5rem;
     }
   }
 }
@@ -105,19 +105,20 @@ p {
 
     &:first-child {
       font-style: italic;
-      font-size: 30px;
+      font-size: 2.5rem;
+      margin-top: -2%;
 
-      @media only screen and (orientation: landscape) {
-        font-size: 60px;
+      @media only screen and (min-width: 767px) and ( orientation: landscape) {
+        font-size: 4rem;
       }
     }
 
     &:last-child {
-      font-size: 20px;
+      font-size: 1.4rem;
       text-transform: uppercase;
 
-      @media only screen and (orientation: landscape) {
-        font-size: 40px;
+      @media only screen and (min-width: 767px) and ( orientation: landscape) {
+        font-size: 2.5rem;
       }
     }
   }
@@ -130,7 +131,7 @@ p {
   overflow: hidden;
   @include w-h( 100%, 50% );
 
-  @media only screen and (orientation: landscape) {
+  @media only screen and (min-width: 640px) and ( orientation: landscape) {
     @include w-h( 50%, 100% );
   }
 
@@ -140,7 +141,7 @@ p {
     position: absolute;
     transform: translate3d( -50%, -20%, 0 );
 
-    @media only screen and (orientation: landscape) {
+    @media only screen and (min-width: 640px) and ( orientation: landscape) {
       transform: translate3d( -50%, -25%, 0 );
     }
 
@@ -193,7 +194,7 @@ p {
       border: 2px solid $b;
       clip-path: polygon( 0% 0%, 100% 100%, 0% 100% );
 
-      @media only screen and (orientation: landscape) {
+      @media only screen and (min-width : 640px) and ( orientation: landscape) {
         border: 0.5vmin solid $b;
       }
 
@@ -247,7 +248,7 @@ p {
   &__table {
     @include w-h( 200%, 100vmin );
     @include t-l( 50%, 50% );
-    background: linear-gradient( $w 20%, $g1 );
+    background: linear-gradient( $w, $g3 );
     border-top: 2px solid $b;
     position: absolute;
     transform: translate3d( -50%, 25vmin, 0 );
@@ -298,7 +299,7 @@ p {
 .b1 {
   border-bottom: 0;
 
-  @media only screen and (orientation: landscape) {
+  @media only screen and (min-width: 640px) and ( orientation: landscape) {
     border-bottom: 10px solid $b;
     border-right: 5px solid $b;
   }
@@ -406,7 +407,7 @@ p {
 .b2 {
   border-top: 5px solid $b;
 
-  @media only screen and (orientation: landscape) {
+  @media only screen and (min-width: 640px) and ( orientation: landscape) {
     border-top: 10px solid $b;
     border-left: 5px solid $b;
   }
