@@ -135,9 +135,9 @@ p {
   }
 
   &__cat {
-    position: absolute;
     @include w-h( 70vmin, 70vmin );
     @include t-l( 50%, 50% );
+    position: absolute;
     transform: translate3d( -50%, -20%, 0 );
 
     @media only screen and (orientation: landscape) {
@@ -155,7 +155,7 @@ p {
         @include w-h( 15vmin, 10vmin );
         position: absolute;
         border-radius: 50%;
-        @include t-l( 51%, 22.5% );
+        @include t-l( 55%, 22.5% );
 
         // nose
         &:after {
@@ -225,13 +225,13 @@ p {
     }
 
     &--body {
-      @include w-h( 36vmin, 18vmin );
+      @include w-h( 35vmin, 18vmin );
       @include t-l( 41.6%, 27.2% );
       position: absolute;
       background-color: $b;
       border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
       background:
-        linear-gradient( $t 50.5%, $b 51% );
+        linear-gradient( $t 52%, $b 52.5% );
 
       &::before {
         @include pseduo-div( 97%, 97% );
@@ -242,10 +242,63 @@ p {
         linear-gradient( $t 10%, $g1 10% );
       }
     }
+
+    &--tail {
+      div {
+        transform: rotate( -25deg );
+        @include w-h( 7vmin, 5vmin );
+        background-color: $g1;
+        position: absolute;
+        // border: 1px solid red;
+        border-radius: 80% 80% 0% 0% / 100% 100% 50% 0%;
+
+        &::before,
+        &::after {
+          @include pseduo-div( 7vmin, 5vmin );
+          background-color: $g1;
+          border-radius: 80% 80% 0% 0% / 100% 100% 50% 0%;
+        }
+
+        &:first-child {
+          @include t-l( 45%, 80% );
+          // border: 1px solid red;
+
+          &::before {
+            // border: 1px solid red;
+            @include t-l( 40%, -0.5% );
+            transform: rotate( 10deg );
+          }
+
+          &::after {
+            // border: 1px solid red;
+            @include t-l( 80%, -4% );
+            transform: rotate( 19deg );
+          }
+        }
+
+        &:last-child {
+          // border: 1px solid blue;
+          @include t-l( 53%, 82.7% );
+          transform: rotate( 10deg );
+
+          &::before {
+            // border: 1px solid blue;
+            @include t-l( 45%, 0 );
+            transform: rotate( 10deg );
+          }
+
+          &::after {
+            // border: 1px solid blue;
+            @include t-l( 90%, -4% );
+            transform: rotate( 15deg );
+          }
+        }
+      }
+    }
   }
 
   &__table {
-    @include w-h( 200%, 50vmin );
+    @include w-h( 200%, 100vmin );
     @include t-l( 50%, 50% );
     background: linear-gradient( $w 20%, $g1 );
     border-top: 2px solid $b;
@@ -392,12 +445,12 @@ p {
     }
 
     &--arm-l {
-      @include t-l( 15%, 20% );
+      @include t-l( 15%, 21% );
       transform: rotate( -30deg );
     }
 
     &--arm-r {
-      @include t-l( 15%, 73% );
+      @include t-l( 15%, 72% );
       transform: rotate( 30deg );
     }
   }
@@ -447,7 +500,9 @@ p {
       linear-gradient( 90deg, $t 36%, $g1 37%, $g1 60%, $t 61.5% ),
       radial-gradient( 1.1% 0.3% at 51% 37%, $g1 10vmin, $t 10.4vmin ),
       radial-gradient( 1.1% 0.3% at 51% 39%, $b 10vmin, $t 10.4vmin ),
+      radial-gradient( 1% 2% at 27% 49%, $w 0.4vmin, $t 0.5vmin ),
       radial-gradient( 1% 2% at 27% 49%, $b 1.4vmin, $t 1.5vmin ),
+      radial-gradient( 1% 2% at 72% 49%, $w 0.4vmin, $t 0.5vmin ),
       radial-gradient( 1% 2% at 72% 49%, $b 1.4vmin, $t 1.5vmin ),
       $g1;
 
@@ -507,7 +562,6 @@ p {
         @include t-l( -6.6%, -23% );
         border-radius: 30% 100% 100% 40% / 100% 100% 100% 90%;
         transform: rotate( 29.6deg );
-        // outline: 1px solid green;
         background:
           linear-gradient( 181deg, $b 6.5%, $g1 7.5%, $g1 94%, $b 95% );
       }
@@ -520,7 +574,7 @@ p {
           radial-gradient( 1% 1.2% at 25% 21%, $g1 1.4vmin, $t 1.5vmin, $t 1.8vmin ),
           radial-gradient( 1% 1.2% at 20% 47%, $g1 1.6vmin, $b 1.7vmin, $b 2vmin, $t 2.2vmin ),
           radial-gradient( 1% 1.2% at 25% 21%, $g1 1.4vmin, $b 1.5vmin, $b 1.8vmin, $t 2vmin ),
-          radial-gradient( 1% 1.2% at 25% 79%, $g1 1.4vmin, $b 1.5vmin, $b 1.8vmin, $t 2vmin );
+          radial-gradient( 1% 1.2% at 26% 79%, $g1 1.4vmin, $b 1.5vmin, $b 1.8vmin, $t 2vmin );
       }
     }
   }

@@ -124,11 +124,11 @@ p.desc {
 
 .b1__cat,
 .b2__cat {
-  position: absolute;
   width: 70vmin;
   height: 70vmin;
   top: 50%;
   left: 50%;
+  position: absolute;
   -webkit-transform: translate3d(-50%, -20%, 0);
           transform: translate3d(-50%, -20%, 0);
 }
@@ -159,7 +159,7 @@ p.desc {
   height: 10vmin;
   position: absolute;
   border-radius: 50%;
-  top: 51%;
+  top: 55%;
   left: 22.5%;
 }
 
@@ -266,15 +266,15 @@ p.desc {
 
 .b1__cat--body,
 .b2__cat--body {
-  width: 36vmin;
+  width: 35vmin;
   height: 18vmin;
   top: 41.6%;
   left: 27.2%;
   position: absolute;
   background-color: #000;
   border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50.5%, transparent), color-stop(51%, #000));
-  background: linear-gradient(transparent 50.5%, #000 51%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(52%, transparent), color-stop(52.5%, #000));
+  background: linear-gradient(transparent 52%, #000 52.5%);
 }
 
 .b1__cat--body::before,
@@ -291,10 +291,79 @@ p.desc {
   background: radial-gradient(1% 2.2% at 50% 100%, #fff 12vmin, transparent 12.1vmin), linear-gradient(transparent 10%, #d3d3d3 10%);
 }
 
+.b1__cat--tail div,
+.b2__cat--tail div {
+  -webkit-transform: rotate(-25deg);
+          transform: rotate(-25deg);
+  width: 7vmin;
+  height: 5vmin;
+  background-color: #d3d3d3;
+  position: absolute;
+  border-radius: 80% 80% 0% 0% / 100% 100% 50% 0%;
+}
+
+.b1__cat--tail div::before, .b1__cat--tail div::after,
+.b2__cat--tail div::before,
+.b2__cat--tail div::after {
+  content: '';
+  width: 7vmin;
+  height: 5vmin;
+  display: block;
+  position: absolute;
+  background-color: #d3d3d3;
+  border-radius: 80% 80% 0% 0% / 100% 100% 50% 0%;
+}
+
+.b1__cat--tail div:first-child,
+.b2__cat--tail div:first-child {
+  top: 45%;
+  left: 80%;
+}
+
+.b1__cat--tail div:first-child::before,
+.b2__cat--tail div:first-child::before {
+  top: 40%;
+  left: -0.5%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.b1__cat--tail div:first-child::after,
+.b2__cat--tail div:first-child::after {
+  top: 80%;
+  left: -4%;
+  -webkit-transform: rotate(19deg);
+          transform: rotate(19deg);
+}
+
+.b1__cat--tail div:last-child,
+.b2__cat--tail div:last-child {
+  top: 53%;
+  left: 82.7%;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.b1__cat--tail div:last-child::before,
+.b2__cat--tail div:last-child::before {
+  top: 45%;
+  left: 0;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+.b1__cat--tail div:last-child::after,
+.b2__cat--tail div:last-child::after {
+  top: 90%;
+  left: -4%;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+}
+
 .b1__table,
 .b2__table {
   width: 200%;
-  height: 50vmin;
+  height: 100vmin;
   top: 50%;
   left: 50%;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #fff), to(#d3d3d3));
@@ -457,14 +526,14 @@ p.desc {
 
 .b1__cat--arm-l {
   top: 15%;
-  left: 20%;
+  left: 21%;
   -webkit-transform: rotate(-30deg);
           transform: rotate(-30deg);
 }
 
 .b1__cat--arm-r {
   top: 15%;
-  left: 73%;
+  left: 72%;
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
 }
@@ -518,7 +587,7 @@ p.desc {
 }
 
 .b2__cat--head {
-  background: linear-gradient(182deg, #d3d3d3 41%, transparent 41.5%), linear-gradient(90deg, transparent 36%, #d3d3d3 37%, #d3d3d3 60%, transparent 61.5%), radial-gradient(1.1% 0.3% at 51% 37%, #d3d3d3 10vmin, transparent 10.4vmin), radial-gradient(1.1% 0.3% at 51% 39%, #000 10vmin, transparent 10.4vmin), radial-gradient(1% 2% at 27% 49%, #000 1.4vmin, transparent 1.5vmin), radial-gradient(1% 2% at 72% 49%, #000 1.4vmin, transparent 1.5vmin), #d3d3d3;
+  background: linear-gradient(182deg, #d3d3d3 41%, transparent 41.5%), linear-gradient(90deg, transparent 36%, #d3d3d3 37%, #d3d3d3 60%, transparent 61.5%), radial-gradient(1.1% 0.3% at 51% 37%, #d3d3d3 10vmin, transparent 10.4vmin), radial-gradient(1.1% 0.3% at 51% 39%, #000 10vmin, transparent 10.4vmin), radial-gradient(1% 2% at 27% 49%, #fff 0.4vmin, transparent 0.5vmin), radial-gradient(1% 2% at 27% 49%, #000 1.4vmin, transparent 1.5vmin), radial-gradient(1% 2% at 72% 49%, #fff 0.4vmin, transparent 0.5vmin), radial-gradient(1% 2% at 72% 49%, #000 1.4vmin, transparent 1.5vmin), #d3d3d3;
 }
 
 .b2__cat--head .snout {
@@ -605,5 +674,5 @@ p.desc {
   left: -50%;
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
-  background: radial-gradient(1% 1.2% at 25% 21%, #d3d3d3 1.4vmin, transparent 1.5vmin, transparent 1.8vmin), radial-gradient(1% 1.2% at 20% 47%, #d3d3d3 1.6vmin, #000 1.7vmin, #000 2vmin, transparent 2.2vmin), radial-gradient(1% 1.2% at 25% 21%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 2vmin), radial-gradient(1% 1.2% at 25% 79%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 2vmin);
+  background: radial-gradient(1% 1.2% at 25% 21%, #d3d3d3 1.4vmin, transparent 1.5vmin, transparent 1.8vmin), radial-gradient(1% 1.2% at 20% 47%, #d3d3d3 1.6vmin, #000 1.7vmin, #000 2vmin, transparent 2.2vmin), radial-gradient(1% 1.2% at 25% 21%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 2vmin), radial-gradient(1% 1.2% at 26% 79%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 2vmin);
 }
