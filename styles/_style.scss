@@ -242,59 +242,6 @@ p {
         linear-gradient( $t 10%, $g1 10% );
       }
     }
-
-    &--tail {
-      div {
-        transform: rotate( -25deg );
-        @include w-h( 7vmin, 5vmin );
-        background-color: $g1;
-        position: absolute;
-        // border: 1px solid red;
-        border-radius: 80% 80% 0% 0% / 100% 100% 50% 0%;
-
-        &::before,
-        &::after {
-          @include pseduo-div( 7vmin, 5vmin );
-          background-color: $g1;
-          border-radius: 80% 80% 0% 0% / 100% 100% 50% 0%;
-        }
-
-        &:first-child {
-          @include t-l( 45%, 80% );
-          // border: 1px solid red;
-
-          &::before {
-            // border: 1px solid red;
-            @include t-l( 40%, -0.5% );
-            transform: rotate( 10deg );
-          }
-
-          &::after {
-            // border: 1px solid red;
-            @include t-l( 80%, -4% );
-            transform: rotate( 19deg );
-          }
-        }
-
-        &:last-child {
-          // border: 1px solid blue;
-          @include t-l( 53%, 82.7% );
-          transform: rotate( 10deg );
-
-          &::before {
-            // border: 1px solid blue;
-            @include t-l( 45%, 0 );
-            transform: rotate( 10deg );
-          }
-
-          &::after {
-            // border: 1px solid blue;
-            @include t-l( 90%, -4% );
-            transform: rotate( 15deg );
-          }
-        }
-      }
-    }
   }
 
   &__table {
